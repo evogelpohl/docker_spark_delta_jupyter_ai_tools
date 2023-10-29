@@ -10,7 +10,7 @@ services:
       - "8888:8888"
       - "8050:8050"  # Dash port
     volumes:
-      - C:\Users\jfaddler\OneDrive\Dev_Projects\spark_volumes_windows_pc:/home/jovyan/work
-      - C:\Users\jfaddler\OneDrive\Dev_Projects\spark_volumes_windows_pc\data:/home/jovyan/delta_data
+      - C:\Users\jfaddler\OneDrive\Dev_Projects\analytics_jupyter_notebooks:/home/jovyan/work
+      - C:\Users\jfaddler\OneDrive\Dev_Projects\analytics_demo_data:/home/jovyan/delta_data
     environment:
       - OPENAI_API_KEY
