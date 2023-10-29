@@ -11,6 +11,6 @@ services:
       - "8050:8050"  # Dash port
     volumes:
       - C:\Users\jfaddler\OneDrive\Dev_Projects\analytics_jupyter_notebooks:/home/jovyan/work
-      - C:\Users\jfaddler\OneDrive\Dev_Projects\analytics_demo_data:/home/jovyan/delta_data
+      - C:\Users\jfaddler\OneDrive\Dev_Projects\analytics_demo_data:/home/jovyan/data
     environment:
       - OPENAI_API_KEY

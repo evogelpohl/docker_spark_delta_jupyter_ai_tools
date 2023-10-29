@@ -1,5 +1,5 @@
 # Base Image
-FROM jupyter/all-spark-notebook:latest
+FROM jupyter/all-spark-notebook:x86_64-spark-3.5.0
 
 # Authors and Documentation
 LABEL maintainer="Eric Vogelpohl <eric.vogelpohl@outlook.com>"
