@@ -7,7 +7,7 @@ LABEL version="1.0"
 LABEL description="Docker image with Jupyter, Spark, and additional Python packages."
 
 # Arguments for pip packages
-ARG PIP_PACKAGES="delta-spark \
+ARG PIP_PACKAGES="delta-spark==3.0.0 \
                   deltalake \
                   plotly \
                   dash \
