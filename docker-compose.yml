@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  pyspark-notebook:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: start.sh jupyter lab --NotebookApp.token=''
+    ports:
+      - "8888:8888"
+      - "8050:8050"  # Dash port
+    volumes:
+      - C:\Users\jfaddler\OneDrive\Dev_Projects\spark_volumes_windows_pc:/home/jovyan/work
+      - C:\Users\jfaddler\OneDrive\Dev_Projects\spark_volumes_windows_pc\data:/home/jovyan/delta_data
+    environment:
+      - OPENAI_API_KEY
