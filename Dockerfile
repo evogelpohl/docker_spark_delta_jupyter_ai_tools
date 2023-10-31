@@ -13,6 +13,7 @@ ARG PIP_PACKAGES="delta-spark==3.0.0 \
                   deltalake \
                   plotly \
                   dash \
+                  polars \
                   dash-bootstrap-components \
                   pandas \
                   pivottablejs \

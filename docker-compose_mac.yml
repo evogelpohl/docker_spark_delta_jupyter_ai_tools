@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+  pyspark-notebook:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: start.sh jupyter lab --NotebookApp.token=''
+    ports:
+      - "8888:8888"
+      - "8050:8050"  # Dash port
+    volumes:
+      - /Users/ericvogelpohl/OneDrive/Dev_Projects/analytics_jupyter_notebooks:/home/jovyan/work
+      - /Users/ericvogelpohl/OneDrive\Dev_Projects\analytics_demo_data:/home/jovyan/data
+    environment:
+      - OPENAI_API_KEY
+
+
