@@ -1,7 +1,8 @@
 
 
 # Base Image
-FROM jupyter/all-spark-notebook:x86_64-spark-3.5.0
+FROM jupyter/all-spark-notebook:spark-3.5.0
+
 
 # Authors and Documentation
 LABEL maintainer="Eric Vogelpohl <eric.vogelpohl@outlook.com>"
@@ -13,6 +14,7 @@ ARG PIP_PACKAGES="delta-spark==3.0.0 \
                   deltalake \
                   plotly \
                   dash \
+                  polars \
                   dash-bootstrap-components \
                   pandas \
                   pivottablejs \
