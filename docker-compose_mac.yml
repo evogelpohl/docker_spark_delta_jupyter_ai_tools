@@ -10,8 +10,8 @@ services:
       - "8888:8888"
       - "8050:8050"  # Dash port
     volumes:
-      - /Users/ericvogelpohl/OneDrive/Dev_Projects/analytics_jupyter_notebooks:/home/jovyan/work
-      - /Users/ericvogelpohl/OneDrive/Dev_Projects/analytics_demo_data:/home/jovyan/data
+      - /Users/ericvogelpohl/OneDrive/dev/analytics_jupyter_notebooks:/home/jovyan/work
+      - /Users/ericvogelpohl/OneDrive/dev/analytics_demo_data:/home/jovyan/data
     environment:
       - OPENAI_API_KEY
 
