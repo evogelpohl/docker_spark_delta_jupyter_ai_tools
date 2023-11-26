@@ -1,7 +1,7 @@
 
 
 # Base Image
-FROM jupyter/all-spark-notebook:spark-3.5.0
+FROM jupyter/all-spark-notebook:latest
 
 
 # Authors and Documentation
@@ -16,6 +16,8 @@ ARG PIP_PACKAGES="delta-spark==3.0.0 \
                   dash \
                   polars \
                   dash-bootstrap-components \
+                  wptools \
+                  wikipedia \
                   pandas \
                   pivottablejs \
                   pyspark-ai \

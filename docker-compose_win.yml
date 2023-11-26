@@ -14,3 +14,5 @@ services:
       - C:\Users\jfaddler\OneDrive\dev\analytics_demo_data:/home/jovyan/data
     environment:
       - OPENAI_API_KEY
+      - PEOPLE_DATA_LABS_KEY
+      - CRUNCHBASE_API_KEY
