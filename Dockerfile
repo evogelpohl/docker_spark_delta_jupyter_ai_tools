@@ -1,8 +1,5 @@
-
-
 # Base Image
-FROM jupyter/all-spark-notebook:latest
-
+FROM jupyter/all-spark-notebook:spark-3.5.0
 
 # Authors and Documentation
 LABEL maintainer="Eric Vogelpohl <eric.vogelpohl@outlook.com>"
@@ -10,28 +7,27 @@ LABEL version="1.0"
 LABEL description="Docker image with Jupyter, Spark, and additional Python packages. NOTE: Ensure Spark & Delta are compatible @ https://docs.delta.io/latest/releases.html"
 
 # Arguments for pip packages
-ARG PIP_PACKAGES="delta-spark==3.0.0 \
+ARG PIP_PACKAGES="delta-spark==3.1.0 \
                   deltalake \
                   plotly \
-                  dash \
+                  duckdb \
                   polars \
-                  dash-bootstrap-components \
-                  wptools \
-                  wikipedia \
+                  youtube-transcript-api \
+                  nltk \
+                  wordcloud \
                   pandas \
-                  pivottablejs \
-                  pyspark-ai \
-                  jupyter_ai \
                   openai \
-                  delta-sharing "
+                  delta-sharing \
+                  notebook \
+                  jupyter \
+                  jupyter_ai"
 
-# Change permissions for the jovyan user
+# Install necessary system packages and JDK
 USER root
-RUN chown -R jovyan:users /home/jovyan
+RUN apt update && apt install -y default-jdk && \
+    chown -R jovyan:users /home/jovyan
 
-# Switch to jovyan user and install the specified pip packages
+# Switch to jovyan user and install Python packages
 USER jovyan
-RUN pip install ${PIP_PACKAGES}
-
-# Expose the port Dash will run on
-EXPOSE 8050
+RUN pip install ${PIP_PACKAGES} && \
+    jupyter lab build --minimize=False

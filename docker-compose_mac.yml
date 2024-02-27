@@ -10,11 +10,13 @@ services:
       - "8888:8888"
       - "8050:8050"  # Dash port
     volumes:
-      - /Users/ericvogelpohl/OneDrive/dev/analytics_jupyter_notebooks:/home/jovyan/work
-      - /Users/ericvogelpohl/OneDrive/dev/analytics_demo_data:/home/jovyan/data
+      - /Users/eric/OneDrive/dev/analytics_jupyter_notebooks:/home/jovyan/work
+      - /Users/eric/OneDrive/dev/analytics_demo_data:/home/jovyan/data
+      - /Users/eric/OneDrive/dev:/home/jovyan/devRoot
     environment:
       - OPENAI_API_KEY
       - PEOPLE_DATA_LABS_KEY
       - CRUNCHBASE_API_KEY
-
-
+      - BING_SEARCH_V7_ENDPOINT
+      - BING_SEARCH_V7_SUBSCRIPTION_KEY
+  

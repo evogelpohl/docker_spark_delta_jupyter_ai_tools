@@ -12,6 +12,7 @@ services:
     volumes:
       - C:\Users\jfaddler\OneDrive\dev\analytics_jupyter_notebooks:/home/jovyan/work
       - C:\Users\jfaddler\OneDrive\dev\analytics_demo_data:/home/jovyan/data
+      - C:\Users\jfaddler\OneDrive\dev:/home/jovyan/devRoot
     environment:
       - OPENAI_API_KEY
       - PEOPLE_DATA_LABS_KEY
