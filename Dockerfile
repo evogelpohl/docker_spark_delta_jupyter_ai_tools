@@ -20,7 +20,8 @@ ARG PIP_PACKAGES="delta-spark==3.1.0 \
                   delta-sharing \
                   notebook \
                   jupyter \
-                  jupyter_ai"
+                  jupyter-ai \
+                  jupyter-ai-magics"
 
 # Install necessary system packages and JDK
 USER root
