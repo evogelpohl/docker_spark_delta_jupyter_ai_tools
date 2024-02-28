@@ -26,7 +26,7 @@ RUN apt update && apt install -y default-jdk && \
 # Switch to jovyan user and install Python packages
 USER jovyan
 
-# Attempts to correct JupyterLabs AI bug
+# Attempts to correct JupyterLabs AI chat error bug
 RUN pip install -U jupyter
 RUN pip install -U notebook
 RUN pip install jupyter-ai
