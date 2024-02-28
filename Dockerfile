@@ -2,7 +2,6 @@
 FROM jupyter/all-spark-notebook:latest
 
 # Authors and Documentation
-LABEL maintainer="Eric Vogelpohl <eric.vogelpohl@outlook.com>"
 LABEL version="1.0"
 LABEL description="Docker image with Jupyter, Spark, and additional Python packages. NOTE: Ensure Spark & Delta are compatible @ https://docs.delta.io/latest/releases.html"
 
