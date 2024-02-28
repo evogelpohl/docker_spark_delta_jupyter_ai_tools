@@ -1,5 +1,5 @@
 # Base Image
-FROM jupyter/all-spark-notebook:spark-3.5.0
+FROM jupyter/all-spark-notebook:latest
 
 # Authors and Documentation
 LABEL maintainer="Eric Vogelpohl <eric.vogelpohl@outlook.com>"
@@ -17,11 +17,7 @@ ARG PIP_PACKAGES="delta-spark==3.1.0 \
                   wordcloud \
                   pandas \
                   openai \
-                  delta-sharing \
-                  notebook \
-                  jupyter \
-                  jupyter-ai \
-                  jupyter-ai-magics"
+                  delta-sharing"
 
 # Install necessary system packages and JDK
 USER root
@@ -30,5 +26,15 @@ RUN apt update && apt install -y default-jdk && \
 
 # Switch to jovyan user and install Python packages
 USER jovyan
-RUN pip install ${PIP_PACKAGES} && \
-    jupyter lab build --minimize=False
+
+# Attempts to correct JupyterLabs AI bug
+RUN pip install -U jupyter
+RUN pip install -U notebook
+RUN pip install jupyter-ai
+RUN pip install jupyter-ai-magics
+# Jupyter lab build
+RUN jupyter lab build --minimize=False
+
+# Install other analytical tools
+RUN pip install ${PIP_PACKAGES}
+
