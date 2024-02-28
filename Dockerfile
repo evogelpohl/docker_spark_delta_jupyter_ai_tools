@@ -29,8 +29,8 @@ USER jovyan
 # Attempts to correct JupyterLabs AI chat error bug
 RUN pip install -U jupyter
 RUN pip install -U notebook
-RUN pip install jupyter-ai
-RUN pip install jupyter-ai-magics
+RUN pip install -U jupyter-ai
+RUN pip install -U jupyter-ai-magics
 # Jupyter lab build
 RUN jupyter lab build --minimize=False
 
