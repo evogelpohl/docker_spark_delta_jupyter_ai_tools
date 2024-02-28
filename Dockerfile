@@ -18,7 +18,7 @@ ARG PIP_PACKAGES="delta-spark==3.1.0 \
                   openai \
                   delta-sharing"
 
-# Install necessary system packages and JDK
+# Install necessary system packages and the jdk (required for a OHDSI Synthea data generator project only)
 USER root
 RUN apt update && apt install -y default-jdk && \
     chown -R jovyan:users /home/jovyan
