@@ -11,6 +11,7 @@ ARG PIP_PACKAGES="delta-spark==3.1.0 \
                   plotly \
                   duckdb \
                   polars \
+                  faker \
                   youtube-transcript-api \
                   nltk \
                   wordcloud \
@@ -36,4 +37,3 @@ RUN jupyter lab build --minimize=False
 
 # Install other analytical tools
 RUN pip install ${PIP_PACKAGES}
-
