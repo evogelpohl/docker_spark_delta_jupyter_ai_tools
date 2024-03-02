@@ -6,7 +6,7 @@ LABEL version="1.0"
 LABEL description="Docker image with Jupyter, Spark, and additional Python packages. NOTE: Ensure Spark & Delta are compatible @ https://docs.delta.io/latest/releases.html"
 
 # Arguments for pip packages
-ARG PIP_PACKAGES="delta-spark==3.1.0 \
+ARG PIP_PACKAGES="delta-spark==3.0.0 \
                   deltalake \
                   plotly \
                   duckdb \

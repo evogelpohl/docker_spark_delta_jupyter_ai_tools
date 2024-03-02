@@ -13,6 +13,7 @@ services:
       - /Users/eric/OneDrive/dev/analytics_jupyter_notebooks:/home/jovyan/work
       - /Users/eric/OneDrive/dev/analytics_demo_data:/home/jovyan/data
       - /Users/eric/OneDrive/dev:/home/jovyan/devRoot
+      - /Users/eric/OneDrive - Presidio Network Solutions/dev:/home/jovyan/presidio
     environment:
       - OPENAI_API_KEY
       - PEOPLE_DATA_LABS_KEY
