@@ -11,6 +11,7 @@ ARG PIP_PACKAGES="delta-spark==3.0.0 \
                   plotly \
                   duckdb \
                   polars \
+                  sodapy \
                   faker \
                   youtube-transcript-api \
                   nltk \
