@@ -16,6 +16,7 @@ ARG PIP_PACKAGES="delta-spark==3.0.0 \
                   nltk \
                   wordcloud \
                   pandas \
+                  pandasai \
                   openai \
                   delta-sharing"
 
