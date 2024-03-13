@@ -9,7 +9,7 @@ LABEL description="Docker image with Jupyter, Spark, and additional Python packa
 ARG PIP_PACKAGES="delta-spark==3.0.0 \
                   deltalake \
                   plotly \
-                  duckdb \
+                  # duckdb \
                   polars \
                   sodapy \
                   faker \
@@ -34,6 +34,8 @@ RUN pip install -U jupyter
 RUN pip install -U notebook
 RUN pip install -U jupyter-ai
 RUN pip install -U jupyter-ai-magics
+RUN pip install -U jupyterlab-git
+
 # Jupyter lab build
 RUN jupyter lab build --minimize=False
 
