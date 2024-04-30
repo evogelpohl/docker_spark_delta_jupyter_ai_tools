@@ -35,6 +35,7 @@ RUN pip install -U notebook
 RUN pip install -U jupyter-ai
 RUN pip install -U jupyter-ai-magics
 RUN pip install -U jupyterlab-git
+RUN pip install -U pandasai
 
 # Jupyter lab build
 RUN jupyter lab build --minimize=False
