@@ -8,7 +8,7 @@ services:
     command: start.sh jupyter lab --NotebookApp.token=''
     ports:
       - "8888:8888"
-      - "8050:8050"  # Dash port
+      - "8050:8050"  # Plotly Dash port for experimentation
     volumes:
       - /Users/eric/OneDrive/dev/analytics_jupyter_notebooks:/home/jovyan/work
       - /Users/eric/OneDrive/dev/analytics_demo_data:/home/jovyan/data
@@ -29,4 +29,6 @@ services:
       - AZURE_API_VERSION
       - AZURE_OPENAI_ENDPOINT
       - AZURE_OPENAI_DEPLOYMENT
+      - TAVILY_API_KEY
+  
        
