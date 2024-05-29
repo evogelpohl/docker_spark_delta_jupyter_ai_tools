@@ -30,5 +30,11 @@ services:
       - AZURE_OPENAI_ENDPOINT
       - AZURE_OPENAI_DEPLOYMENT
       - TAVILY_API_KEY
-  
-       
+    deploy:
+      resources:
+        limits:
+          memory: 8G   # Limit memory usage to 8GB
+          cpus: "2.0"  # Limit CPU usage to 2 CPUs
+        reservations:
+          memory: 4G   # Reserve 4GB memory
+          cpus: "1.0"  # Reserve 1 CPU
